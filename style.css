@@ -1,0 +1,23 @@
+
+.budget{
+    color: green;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 30px;
+}
+h1{
+    color: rgb(0, 238, 255);
+    text-align: center;
+}
+h2{
+    color: green;
+    font-size: 30px;
+}
+p{
+    color: red;
+    font-size: 20px;
+}
+img{
+    width: 50%;
+}
