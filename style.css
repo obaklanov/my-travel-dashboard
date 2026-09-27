@@ -59,3 +59,23 @@ main {
 .featured {
     background-color: lightyellow;
 }
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .destination-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.destination-grid {
+    display: flex;
+    gap: 30px;
+}
+.destination-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    flex: 1;
+}
