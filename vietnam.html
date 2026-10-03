@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Vietnam</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1> Explore Vietnam</h1>    
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a> </li> 
-                <li><a href="vietnam.html">Vietnam</a> </li>             
-                <li><a href="thailand.html">Thailand</a> </li> 
-                <li><a href="indonesia.html">Indonesia</a> </li> 
-                <li><a href="malaysia.html">Malaysia</a> </li> 
-            </ul> 
-        </nav>
-        <main>
-            <section class="card featured">
-                <p class="budget">Estimated daily budget: $40</p>
-                <p>Best time to visit: February-April</p>
-                <p>Vietnam is a country in SouthEast Asia that is cheap and safe. Has good food and around 100MM people living there. Two major cities are Hanoi and Ho Chi Minh</p>                
-            </section>
-            <section>
-                <h2>Quick Facts</h2>
-                <div class="quick-facts">
-                    <div class="facts-card">
-                        <h3>Budget</h3>
-                        <p>$40/day</p>
-                    </div>
-                    <div class="facts-card">
-                        <h3>Best Time</h3>
-                        <p>Feb-Apr</p>
-                    </div>
-                    <div class="facts-card">
-                        <h3>Region</h3>
-                        <p>SE Asia</p>
-                    </div>
+
+<head>
+    <title>Vietnam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1> Explore Vietnam</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="vietnam.html">Vietnam</a> </li>
+            <li><a href="thailand.html">Thailand</a> </li>
+            <li><a href="indonesia.html">Indonesia</a> </li>
+            <li><a href="malaysia.html">Malaysia</a> </li>
+        </ul>
+    </nav>
+    <main>
+<!--1. Intro/Card Featured. Yellow large card with budget, best time to visit and description-->        
+        <section class="card featured">
+            <p class="budget">Estimated daily budget: $40</p>
+            <p>Best time to visit: February-April</p>
+            <p>Vietnam is a country in SouthEast Asia that is cheap and safe. Has good food and around 100MM people
+                living there. Two major cities are Hanoi and Ho Chi Minh</p>
+        </section>
+<!--2. Quick facts. Small boxes with quick facts-->
+        <section>
+            <h2>Quick Facts</h2>
+            <div class="quick-facts-box">
+                <div class="facts-card">
+                    <h3>Budget</h3>
+                    <p>$40/day</p>
                 </div>
-            </section>
-            <section class="card">
-                <h2>Things I want to explore</h2>
-                <ul>
-                    <li>Da Nang</li>             
-                    <li>Hoi An</li>
-                    <li>Hanoi</li>
-                </ul> 
-            </section>
-            <img src="images/vietnam.jpeg" alt="Train in Vietnam">
-        </main>
-        <footer>
-            <p>My Travel Dashboard - 2026</p>
-        </footer>
-    </body>
+                <div class="facts-card">
+                    <h3>Best Time</h3>
+                    <p>Feb-Apr</p>
+                </div>
+                <div class="facts-card">
+                    <h3>Region</h3>
+                    <p>SE Asia</p>
+                </div>
+            </div>
+        </section>
+<!--3. NEW! Why Vietnam. short general description, paragraph of 2-3 sentences-->
+        <section>
+            <h2>Why Vietnam?</h2>
+            <p>Vietnam is an incredible destination because it effortlessly pairs breathtaking natural wonders, like the limestone karsts of Ha Long Bay, with an exceptionally rich history and vibrant cities. On top of its stunning landscapes, it offers one of the world's most celebrated street food cultures and deeply welcoming hospitality, all while remaining highly affordable for travelers.</p>
+        </section>
+<!--4. NEW! Explore box that will contain 3 explore cards, each one to have h3 and p-->
+        <section>
+            <h2>Places to Explore</h2>
+            <div class="explore-box">
+                <div class="explore-card">
+                    <h3>Da Nang</h3>
+                    <p>Da Nang is a vibrant coastal city in central Vietnam renowned for its sandy beaches, French colonial history, and proximity to the striking Marble Mountains and the iconic Dragon Bridge.</p>                    
+                </div>
+                <div class="explore-card">
+                    <h3>Hoi An</h3>
+                    <p>Hoi An is a beautifully preserved historic town in central Vietnam, famous for its atmospheric, lantern-lit Old Quarter, ancient yellow merchants' houses, and rich culinary scene.</p>                    
+                </div>
+                <div class="explore-card">
+                    <h3>Hanoi</h3>
+                    <p>Hanoi is the chaotic yet charming capital of Vietnam, beloved for its 1,000-year-old history, a maze-like Old Quarter, Parisian-style colonial architecture, and serene city lakes.</p>                    
+                </div>                
+            </div>
+        </section>
+<!--5. NEW! Tips. list of 3 tips-->
+        <section class="tips">
+            <h2>Travel Tips</h2>
+            <ul>
+                <li>Use Grab: Download the Grab Vietnam app to book safe, fixed-price car and motorcycle rides without haggling.</li>
+                <li>Carry Cash: Keep Vietnamese Đồng (VND) on hand, as street vendors, markets, and small cafes rarely accept cards.</li>
+                <li>Drink Safely: Stick strictly to bottled water and avoid ice at smaller street stalls to prevent stomach bugs.</li>
+            </ul>
+        </section>
+<!--6. Image-->
+        <img src="images/vietnam.jpeg" alt="Train in Vietnam">
+    </main>
+    <footer>
+        <p>My Travel Dashboard - 2026</p>
+    </footer>
+</body>
+
 </html>

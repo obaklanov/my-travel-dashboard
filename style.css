@@ -1,41 +1,39 @@
+/* 1. RESET/GLOBAL */
 * {
     box-sizing: border-box;
 }
-.budget{
-    color: green;
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 20px;
-    margin: 30px;
+body {
+    background-color: #f4f6f8;
 }
-h1{
-    color: #183153;
-    text-align: center;
-}
-h2{
-    color: #183153;
-    font-size: 30px;
-}
-p{
-    color: #222222;
-    font-size: 20px;
-}
-.facts-card p {
-  font-size: 15px;  
-}
-img{
+img {
     width: 100%;
     max-width: 100%;
 }
-nav a {
-    color: white;
-    text-decoration: none;
+/* 2. TYPOGRAPHY */
+h1 {
+    color: #183153;
+    text-align: center;
 }
-nav a:hover {
-    color: lightblue;
+h2 {
+    color: #183153;
+    font-size: 30px;
+}
+p {
+    color: #222222;
+    font-size: 20px;
 }
 footer p {
     color: #222222;
+}
+/* 3. PAGE LAYOUT */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* 4. NAVIGATION */
+nav {
+    background-color: #183153;
+    padding: 15px;
 }
 nav ul {
     display: flex;
@@ -45,52 +43,40 @@ nav ul {
     justify-content: center;
     color: white;
 }
-nav {
-    background-color: #183153;
-    padding: 15px;
+nav a {
+    color: white;
+    text-decoration: none;
 }
-main {
-    max-width: 900px;
-    margin: 0 auto;
+nav a:hover {
+    color: lightblue;
 }
-.card, .destination-card {
+/* 5. SHARED COMPONENTS */
+.card,
+.destination-card,
+.facts-card,
+.explore-card {
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: white;   
+    background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 20px #cccccc;
-}
-.destination-card a {
-    background-color: #2878b5;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    text-decoration: none;
-    margin-top: auto;
 }
 .card {
     margin: 20px 0;
     width: 100%;
 }
-.destination-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
 .featured {
     background-color: lightyellow;
 }
-.destination-grid {
-    display: flex;
-    gap: 30px;
+.budget {
+    color: green;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 30px;
 }
-body {
-    background-color: #f4f6f8;
-}
-.facts-card h3 {
-  font-size: 25px;  
-}
-.hero{
+/* 6. HOME PAGE */
+.hero {
     background-color: beige;
     padding: 50px;
     margin: 20px 0;
@@ -100,34 +86,72 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-.quick-facts {
+.destination-box {
+    display: flex;
+    gap: 30px;
+}
+.destination-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.destination-card a {
+    background-color: #2878b5;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: auto;
+}
+/* 7. VIETNAM/QUICK FACTS */
+.quick-facts-box {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 .facts-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: white;
     text-align: center;
-    flex:1;
-    box-shadow: 0 4px 20px #89d0da;
+    flex: 1;
+}
+.facts-card h3 {
+    font-size: 25px;
+}
+.facts-card p {
+    font-size: 15px;
 }
 .facts-card:hover {
     background-color: rgba(198, 214, 166, 0.5);
 }
+.explore-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.explore-card {
+    flex: 1;
+}
+/* 8. RESPONSIVE */
 @media (max-width: 600px) {
+    p{
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 26px;
+    }
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    .destination-grid {
+    .destination-box {
         flex-direction: column;
         gap: 10px;
     }
-    .quick-facts {
+    .quick-facts-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .explore-box {
         flex-direction: column;
         gap: 5px;
     }
