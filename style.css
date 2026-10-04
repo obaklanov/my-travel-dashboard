@@ -9,6 +9,11 @@ img {
     width: 100%;
     max-width: 100%;
 }
+.country-image {
+    max-height: 1000px;
+    object-fit: cover;
+    border-radius: 20px;
+}
 /* 2. TYPOGRAPHY */
 h1 {
     color: #183153;
@@ -24,6 +29,7 @@ p {
 }
 footer p {
     color: #222222;
+    font-size: 12px;
 }
 /* 3. PAGE LAYOUT */
 main {
@@ -66,14 +72,10 @@ nav a:hover {
     width: 100%;
 }
 .featured {
-    background-color: lightyellow;
+    background-color: rgb(211, 236, 243);
 }
 .budget {
-    color: green;
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 20px;
-    margin: 30px;
+    color: black;
 }
 /* 6. HOME PAGE */
 .hero {

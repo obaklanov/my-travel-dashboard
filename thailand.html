@@ -5,36 +5,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <header>
-            <h1> Explore Thailand</h1>    
-        </header>
+<body>
+    <header>
+        <h1> Explore Thailand</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="vietnam.html">Vietnam</a> </li>
+            <li><a href="thailand.html">Thailand</a> </li>
+            <li><a href="indonesia.html">Indonesia</a> </li>
+            <li><a href="malaysia.html">Malaysia</a> </li>
+        </ul>
+    </nav>
+    <main>
+<!--1. Intro/Card Featured. Yellow large card with budget, best time to visit and description-->        
+        <section class="card featured">
+            <p class="budget">Estimated daily budget: $50</p>
+            <p>Best time to visit: January-April</p>
+            <p>Thailand is a vibrant Southeast Asian country renowned for its tropical beaches, ornate Buddhist temples, rich culture, and world-famous cuisine.</p>
+        </section>
+<!--2. Quick facts. Small boxes with quick facts-->
+        <section>
+            <h2>Quick Facts</h2>
+            <div class="quick-facts-box">
+                <div class="facts-card">
+                    <h3>Budget</h3>
+                    <p>$50/day</p>
+                </div>
+                <div class="facts-card">
+                    <h3>Best Time</h3>
+                    <p>Jan-Apr</p>
+                </div>
+                <div class="facts-card">
+                    <h3>Region</h3>
+                    <p>SE Asia</p>
+                </div>
+            </div>
+        </section>
+<!--3. Why Thailand. short general description, paragraph of 2-3 sentences-->
+        <section>
+            <h2>Why Thailand?</h2>
+            <p>Thailand offers an incredible contrast of experiences, where you can explore centuries-old Buddhist temples in bustling cities and relax on pristine, tropical island beaches all in one trip. Beyond its breathtaking landscapes, travelers are drawn by its world-renowned culinary scene, affordable luxury, and the legendary warmth and hospitality of its people.</p>
+        </section>
+<!--4. Explore box that will contain 3 explore cards, each one to have h3 and p-->
+        <section>
+            <h2>Places to Explore</h2>
+            <div class="explore-box">
+                <div class="explore-card">
+                    <h3>Bangkok</h3>
+                    <p>Bangkok captivates visitors with its striking contrast of sacred centuries-old temples, electric night markets, and world-class street food thriving alongside modern skyscrapers and vibrant nightlife.</p>                    
+                </div>
+                <div class="explore-card">
+                    <h3>Chiang Mai</h3>
+                    <p>Chiang Mai offers a serene, culture-rich escape nestled in northern Thailand's mountains, where you can explore ancient Lanna temples, vibrant night bazaars, and lush rainforest sanctuaries.</p>                    
+                </div>
+                <div class="explore-card">
+                    <h3>Krabi</h3>
+                    <p>Krabi mesmerizes visitors with its iconic limestone karst cliffs, turquoise waters, and idyllic offshore islands, making it a paradise for beach lovers, island hoppers, and outdoor adventurers.</p>                    
+                </div>                
+            </div>
+        </section>
+<!--5. Tips. list of 3 tips-->
+        <section class="tips">
+            <h2>Travel Tips</h2>
+            <ul>
+                <li>Complete the mandatory Thailand Digital Arrival Card (TDAC) online within three days before your flight.</li>
+                <li>Always keep modest clothing on hand to cover your shoulders and knees when entering sacred temples.</li>
+                <li>Carry cash in small bills, as local night markets and street food stalls rarely accept credit cards.</li>
+            </ul>
+        </section>
+<!--6. Image-->
+        <img src="images/thailand.jpg" alt="Boats and limestone mountains at a beach in Krabi, Thailand">
+    </main>
+    <footer>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a> </li> 
-                <li><a href="vietnam.html">Vietnam</a> </li>             
-                <li><a href="thailand.html">Thailand</a> </li> 
-                <li><a href="indonesia.html">Indonesia</a> </li> 
-                <li><a href="malaysia.html">Malaysia</a> </li> 
-            </ul> 
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="vietnam.html">Vietnam</a> </li>
+                <li><a href="thailand.html">Thailand</a> </li>
+                <li><a href="indonesia.html">Indonesia</a> </li>
+                <li><a href="malaysia.html">Malaysia</a> </li>
+            </ul>
         </nav>
-        <main>
-            <section class="card featured">
-                <p class="budget">Estimated daily budget: $60</p>
-                <p>Best time to visit: March-May</p>
-                <p>Thailand is the country in SouthEast Asia with around 70MM population. Famous tourist destination and known for great cuisine and prestine beaches</p>                
-            </section>
-            <section class="card">
-                <h2>Things I want to explore</h2>
-                <ul>
-                    <li>Bangkok</li>             
-                    <li>Chiang Mai</li>
-                    <li>Chiang Rai</li>
-                </ul> 
-            </section>
-        </main>
-        <footer>
-            <p>My Travel Dashboard - 2026</p>
-        </footer>
-    </body>
+        <p>My Travel Dashboard - 2026</p>
+    </footer>
+</body>
 </html>
