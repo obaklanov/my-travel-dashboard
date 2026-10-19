@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Vietnam",
+        "capital": "Hanoi",
+        "budget": 40,
+        "region": "Southeast Asia",
+        "page": "vietnam.html"
+    }, {
+        "name":"Thailand",
+        "capital": "Bangkok",
+        "budget": 60,
+        "region": "Southeast Asia",
+        "page": "thailand.html"
+    }, {
+        "name":"Indonesia",
+        "capital": "Jakarta",
+        "budget": 50,
+        "region": "Southeast Asia",
+        "page": "indonesia.html" 
+    }, {
+        "name":"Malaysia",
+        "capital": "Kuala Lumpur",
+        "budget": 45,
+        "region": "Southeast Asia",
+        "page": "malaysia.html" 
+    }
+]
