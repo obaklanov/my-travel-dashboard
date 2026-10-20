@@ -182,3 +182,14 @@ nav a:hover {
         gap: 5px;
     }
 }
+/* Home-page data context */
+.data-footer {
+    max-width: 900px;
+    margin: 24px auto;
+}
+.data-footer p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+    margin: 4px 0;
+}

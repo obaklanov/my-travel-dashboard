@@ -8,6 +8,7 @@ const selectedRegion = document.querySelector(".selected-region")
 const destinationBox = document.querySelector(".destination-box")
 const maxBudgetInput = document.querySelector("#max-budget")
 const destinationStatus = document.querySelector(".destination-status")
+const destinationLoadStatus = document.querySelector(".destination-load-status")
 
 
 //Data
@@ -107,58 +108,69 @@ function compareBudgets(a, b) {
 async function loadDestinations() {
     maxBudgetInput.disabled = true
     destinationStatus.textContent = "Loading destinations..."
+    destinationLoadStatus.textContent = "Loading destination data..."
     try {
         const response = await fetch("./destinations.json")
         if (response.ok === false) {
             console.log("Could not load destinations", response.status)
             destinationStatus.textContent = "Could not load destinations. Please try again later."
+            destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
             return;
         } else {
             const loadedDestinations = await response.json()
             if (Array.isArray(loadedDestinations) === false) {
                 console.log("Expected an array of destinations")
                 destinationStatus.textContent = "Destination data has an unexpected format."
+                destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                 return;
             } 
             for (const destination of loadedDestinations) {
                 if (destination === null || typeof destination !== "object" || Array.isArray(destination)) {
                     console.log("Invalid destination entry", destination)
                     destinationStatus.textContent = "Destination data contains an invalid entry"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 }
                 if (typeof destination.name !== "string" || destination.name.trim() === "") {
                     console.log("Invalid destination name", destination)
                     destinationStatus.textContent = "Destination data contains an invalid name"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 }
                 if (typeof destination.capital !== "string" || destination.capital.trim() === "") {
                     console.log("Invalid destination capital", destination)
                     destinationStatus.textContent = "Destination data contains an invalid capital"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 }
                 if (typeof destination.region !== "string" || destination.region.trim() === "") {
                     console.log("Invalid destination region", destination)
                     destinationStatus.textContent = "Destination data contains an invalid region"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 }
                 if (typeof destination.page !== "string" || destination.page.trim() === "") {
                     console.log("Invalid destination page", destination)
                     destinationStatus.textContent = "Destination data contains an invalid page"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 }
                 if(Number.isFinite(destination.budget) === false || destination.budget <0) {
                     console.log("Invalid budget for destination", destination.name)
                     destinationStatus.textContent = "Destination data contains an invalid budget"
+                    destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
                     return;
                 } 
             }
             destinations = loadedDestinations
             maxBudgetInput.disabled = false
             handleBudgetInput()
+            destinationLoadStatus.textContent = "Data loaded this session at " + new Date().toLocaleString();
         } 
     }
     catch (error) {
         console.log("Destination loading failed", error);
+        destinationLoadStatus.textContent = "Destination data could not be loaded. Reload the page to try again."
         destinationStatus.textContent = "Could not load destinations. Please try again later."
     }
  }
